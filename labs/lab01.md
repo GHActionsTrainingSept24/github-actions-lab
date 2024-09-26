@@ -16,6 +16,10 @@ References:
       - main
     paths:
       - 'labs/**'
+
+steps:
+  - name : Run a test command
+    run: echo "testing files in the labs folder"
 ```
 3. Commit the workflow changes into the `main` branch
 4. Change a file inside the folder [labs](/labs)
@@ -59,6 +63,7 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+       
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
